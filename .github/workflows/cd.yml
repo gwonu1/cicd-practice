@@ -16,4 +16,4 @@ jobs:
       - name: Pull Docker Image from Docker hub
         run: docker pull gwonu/project:latest
       - name: Execute Docker Container
-        run: docker run -d -p 80:3000 --name project gwonu/project:latest
+        run: docker run -d -p 8080:80 --name nginx-proxy gwonu/project:latest
