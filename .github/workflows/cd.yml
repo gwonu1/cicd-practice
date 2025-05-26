@@ -12,8 +12,8 @@ jobs:
 
     steps:
       - name: Delete Docker Image and Containers
-        run: sudo docker rm -f project
+        run: docker rm -f project
       - name: Pull Docker Image from Docker hub
-        run: sudo docker pull gwonu/project:latest
+        run: docker pull gwonu/project:latest
       - name: Execute Docker Container
-        run: sudo docker run -d -p 80:3000 --name project gwonu/project:latest
+        run: docker run -d -p 80:3000 --name project gwonu/project:latest
